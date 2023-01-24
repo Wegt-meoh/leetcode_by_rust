@@ -4,18 +4,13 @@ pub struct Solution{}
 
 impl Solution {
     pub fn count_points(points: Vec<Vec<i32>>, queries: Vec<Vec<i32>>) -> Vec<i32> {
-        let mut result=vec![];
-        let mut points_map=HashMap::new();
-
-        for point in points{
-            points_map.entry(point).and_modify(|x| *x+=1).or_insert(1);
-        }
+        let mut result=Vec::with_capacity(500);                
 
         for qurire in queries{            
             let mut sum=0;
-            for (point,num) in points_map.iter(){
+            for point in points.iter(){
                 if Self::is_point_in_circle((point[0],point[1]), (qurire[0],qurire[1],qurire[2])){
-                    sum+=*num;
+                    sum+=1;
                 }
             }
             result.push(sum);
