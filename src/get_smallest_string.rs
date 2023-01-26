@@ -1,39 +1,32 @@
-use std::result;
-
-pub struct Solution{}
+pub struct Solution {}
 
 impl Solution {
     pub fn get_smallest_string(n: i32, k: i32) -> String {
-        let n=n as usize;
-        let k=k as usize;
-        let a_char_code:u32='a'.to_digit(36).unwrap();        
-        let mut nums=vec![1;n];              
-        let mut index:usize=0;
-
-        for _ in 0..k-n{
-            index=0;
-            while index<n{
-                if nums[index]==26{
-                    nums[index]=1;
-                    index+=1;
-                }else{
-                    nums[index]+=1;
-                    break;
-                }
-            }
+        let n = n as usize;
+        let k = k as usize;        
+        let z_num = (k - n) / 25;
+        if z_num==n{
+            return "z".repeat(n);
         }
-
-        let mut result=String::with_capacity(n as usize);
-        for i in (0..n).rev(){
-            result.push();
+        let p_value = ((k - n) % 25) as u8;
+        let a_num=n-z_num-1;
+        let mut result = String::with_capacity(n);
+        for _ in 0..a_num{
+            result.push('a');
         }
-
+        result.push((b'a'+p_value) as char);
+        for _ in 0..z_num{
+            result.push('z');
+        }
         result
     }
 }
 
 #[test]
-fn test(){    
-    let t=char::from_u32(1+'a'.to(36).unwrap()).unwrap();
-    println!("this is {t}");
+fn test() {
+    let res = Solution::get_smallest_string(3, 27);
+    assert!(res == String::from("aay"));
+    let res1 = Solution::get_smallest_string(5, 73);
+    println!("{res1}");
+    assert!(res1 == String::from("aaszz"));
 }

@@ -21,30 +21,30 @@ impl Solution {
                 curr_dp = &mut dp1;
             }
 
-            for floor in 1..=3 {                
-                if prev_block != floor &&curr_block!=floor{
+            for floor in 1..=3 {
+                if prev_block != floor && curr_block != floor {
                     curr_dp[floor] = prev_dp[floor];
-                }else{
-                    curr_dp[floor]=usize::MAX;
+                } else {
+                    curr_dp[floor] = usize::MAX;
                 }
             }
 
-            for floor in 1..=3{
-                if prev_block==floor||curr_block==floor{
+            for floor in 1..=3 {
+                if prev_block == floor || curr_block == floor {
                     continue;
                 }
 
-                for adjacent in -2..=2{                    
-                    let adjacent=floor as i32 + adjacent;
-                    if adjacent<1||adjacent>3{
+                for adjacent in -2..=2 {
+                    let adjacent = floor as i32 + adjacent;
+                    if adjacent < 1 || adjacent > 3 {
                         continue;
                     }
 
-                    let adjacent=adjacent as usize;
-                    if curr_block!=adjacent{
-                        curr_dp[adjacent]=curr_dp[adjacent].min(curr_dp[floor]+1);
+                    let adjacent = adjacent as usize;
+                    if curr_block != adjacent {
+                        curr_dp[adjacent] = curr_dp[adjacent].min(curr_dp[floor] + 1);
                     }
-                }                
+                }
             }
         }
 
