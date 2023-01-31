@@ -1,3 +1,4 @@
+mod check_x_matrix;
 mod count_points;
 mod find_anagrams;
 mod find_substring;
@@ -7,3 +8,4 @@ mod matrix_rank_transform;
 mod max_happy_groups;
 mod min_side_jumps;
 mod strong_password_checker_ii;
+mod ways_to_make_fair;
