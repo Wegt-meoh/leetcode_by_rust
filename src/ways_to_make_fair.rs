@@ -51,8 +51,7 @@ mod tests {
         assert!(res == 1);
 
         let res = Solution::ways_to_make_fair(vec![1, 1, 1]);
-        println!("{res}");
-        assert!(res == 3);
+        assert!(res == 3, "res = {res}, target=3");
 
         let res = Solution::ways_to_make_fair(vec![1, 2, 3]);
         println!("{res}");
