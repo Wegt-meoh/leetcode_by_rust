@@ -16,3 +16,5 @@ mod num_moves_stones_ii;
 mod strong_password_checker_ii;
 mod validate_stack_sequences;
 mod ways_to_make_fair;
+mod is_robot_bounded;
+mod next_larger_nodes;
