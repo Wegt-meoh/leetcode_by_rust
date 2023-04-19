@@ -18,3 +18,5 @@ mod validate_stack_sequences;
 mod ways_to_make_fair;
 mod is_robot_bounded;
 mod next_larger_nodes;
+mod longest_prefix;
+mod max_sum_after_partitioning;
