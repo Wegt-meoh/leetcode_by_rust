@@ -20,3 +20,5 @@ mod is_robot_bounded;
 mod next_larger_nodes;
 mod longest_prefix;
 mod max_sum_after_partitioning;
+mod make_array_increasing;
+mod length_of_lis;
