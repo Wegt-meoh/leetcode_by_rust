@@ -6,12 +6,12 @@ impl Solution {
         nums.insert(0, 1);
         let n = nums.len();
 
-        let mut dp = vec![vec![0; n]; n];     
+        let mut dp = vec![vec![0; n]; n];
 
         for length in 2..n {
             for begin in 0..n {
                 let end = begin + length;
-                if end>=n{
+                if end >= n {
                     break;
                 }
 
@@ -22,7 +22,7 @@ impl Solution {
             }
         }
 
-        return dp[0][n-1];
+        return dp[0][n - 1];
     }
 }
 
