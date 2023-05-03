@@ -1,10 +1,10 @@
-use std::{mem::swap, collections::HashSet};
+use std::{collections::HashSet, mem::swap};
 
 pub struct Solution {}
 
 impl Solution {
-    pub fn powerful_integers(mut x: i32,mut y: i32, bound: i32) -> Vec<i32> {
-        if bound<=1{
+    pub fn powerful_integers(mut x: i32, mut y: i32, bound: i32) -> Vec<i32> {
+        if bound <= 1 {
             return vec![];
         }
 
@@ -13,53 +13,52 @@ impl Solution {
                 return vec![2];
             }
             return vec![];
-        }        
+        }
 
-        if y==1||x==1{
-            if y==1 {
+        if y == 1 || x == 1 {
+            if y == 1 {
                 swap(&mut x, &mut y);
             }
-            let mut result=vec![];
-            let mut curr_y=1;            
-            for _ in 0..=20{                
-                if curr_y>=bound{
+            let mut result = vec![];
+            let mut curr_y = 1;
+            for _ in 0..=20 {
+                if curr_y >= bound {
                     break;
                 }
 
-                if curr_y+x<=bound{
-                    result.push(curr_y+x);
-                }else{
+                if curr_y + x <= bound {
+                    result.push(curr_y + x);
+                } else {
                     break;
                 }
-                curr_y*=y;
+                curr_y *= y;
             }
 
             return result;
         }
 
-        let mut result_set:HashSet<i32>=HashSet::new();       
-        let mut curr_x=1;
-        let mut curr_y=1;
-        for _ in 0..20{               
-            curr_y=1;
-            if curr_x>=bound{
+        let mut result_set: HashSet<i32> = HashSet::new();
+        let mut curr_x = 1;
+        let mut curr_y = 1;
+        for _ in 0..20 {
+            curr_y = 1;
+            if curr_x >= bound {
                 break;
             }
-            for _ in 0..20{
-                if curr_y>=bound{
+            for _ in 0..20 {
+                if curr_y >= bound {
                     break;
                 }
 
-                if curr_x+curr_y<=bound{
-                    result_set.insert(curr_x+curr_y);
-                }else{
+                if curr_x + curr_y <= bound {
+                    result_set.insert(curr_x + curr_y);
+                } else {
                     break;
                 }
-                curr_y*=y;
+                curr_y *= y;
             }
-            curr_x*=x;
+            curr_x *= x;
         }
-
 
         result_set.into_iter().collect()
     }
