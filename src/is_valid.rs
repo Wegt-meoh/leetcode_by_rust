@@ -36,9 +36,9 @@ impl Solution {
         for i in 0..s.len() {
             let item = &s[i..i + 1];
             if item == "c" {
-                let prev1=stack.pop();
-                let prev2=stack.pop();
-                if prev1!=Some("b")||prev2!=Some("a"){
+                let prev1 = stack.pop();
+                let prev2 = stack.pop();
+                if prev1 != Some("b") || prev2 != Some("a") {
                     return false;
                 }
             } else {
