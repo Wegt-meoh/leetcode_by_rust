@@ -1,20 +1,20 @@
-pub struct Solution{}
+pub struct Solution {}
 
 impl Solution {
     pub fn hardest_worker(n: i32, logs: Vec<Vec<i32>>) -> i32 {
-        let mut prev_time=0;
-        let mut max_time=0;
-        let mut best_worker_id=-1;
+        let mut prev_time = 0;
+        let mut max_time = 0;
+        let mut best_worker_id = -1;
 
-        logs.iter().for_each(|x|{
-            let id=x[0];
-            let end_time=x[1];
-            let total_time=end_time-prev_time;
-            if total_time==max_time&& id<best_worker_id||total_time>max_time{
-                best_worker_id=id;
-                max_time=total_time;                
+        logs.iter().for_each(|x| {
+            let id = x[0];
+            let end_time = x[1];
+            let total_time = end_time - prev_time;
+            if total_time == max_time && id < best_worker_id || total_time > max_time {
+                best_worker_id = id;
+                max_time = total_time;
             }
-            prev_time=end_time;
+            prev_time = end_time;
         });
 
         best_worker_id
@@ -36,7 +36,7 @@ impl Solution {
 // 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 #[test]
-fn test(){
+fn test() {
     let n = 10;
-    let logs = vec![vec![0,3],vec![2,5],vec![0,9],vec![1,15]];
+    let logs = vec![vec![0, 3], vec![2, 5], vec![0, 9], vec![1, 15]];
 }

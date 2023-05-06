@@ -18,16 +18,16 @@ impl Solution {
         -1
     }
 
-    pub fn single_number1(nums: Vec<i32>) -> i32 {        
-        let mut ans=0;
+    pub fn single_number1(nums: Vec<i32>) -> i32 {
+        let mut ans = 0;
 
-        for i in 0..32{
-            let mut total=0;
-            nums.iter().for_each(|item|{
-                total+=(*item)>>i&1;
+        for i in 0..32 {
+            let mut total = 0;
+            nums.iter().for_each(|item| {
+                total += (*item) >> i & 1;
             });
-            if total%3==1{
-                ans|=1<<i;
+            if total % 3 == 1 {
+                ans |= 1 << i;
             }
         }
 
@@ -36,10 +36,10 @@ impl Solution {
 }
 
 #[test]
-fn test11(){
-    let t=-1;    
-    for i in 0..32{
-        println!("{}", t>>i&1);
+fn test11() {
+    let t = -1;
+    for i in 0..32 {
+        println!("{}", t >> i & 1);
     }
 }
 
