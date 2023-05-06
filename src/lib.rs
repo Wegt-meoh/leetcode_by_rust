@@ -33,8 +33,3 @@ mod sort_people;
 mod strong_password_checker_ii;
 mod validate_stack_sequences;
 mod ways_to_make_fair;
-
-
-
-
-
