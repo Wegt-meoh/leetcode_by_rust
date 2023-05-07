@@ -27,6 +27,7 @@ mod moves_to_make_zigzag;
 mod next_larger_nodes;
 mod num_moves_stones_ii;
 mod num_of_minutes;
+mod num_pairs_divisible_by60;
 mod powerful_integers;
 mod single_number;
 mod sort_people;
