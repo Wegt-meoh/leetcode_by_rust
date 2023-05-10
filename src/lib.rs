@@ -32,6 +32,7 @@ mod num_of_minutes;
 mod num_pairs_divisible_by60;
 mod powerful_integers;
 mod single_number;
+mod smallest_repunit_div_by_k;
 mod sort_people;
 mod strong_password_checker_ii;
 mod validate_stack_sequences;
