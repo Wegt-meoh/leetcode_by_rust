@@ -31,6 +31,7 @@ mod num_moves_stones_ii;
 mod num_of_minutes;
 mod num_pairs_divisible_by60;
 mod powerful_integers;
+mod query_string;
 mod single_number;
 mod smallest_repunit_div_by_k;
 mod sort_people;
