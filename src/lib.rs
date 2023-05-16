@@ -25,6 +25,7 @@ mod max_happy_groups;
 mod max_sum_after_partitioning;
 mod max_total_fruits;
 mod max_value_after_reverse;
+mod min_difficulty;
 mod min_number_of_frogs;
 mod min_push_box;
 mod min_side_jumps;
