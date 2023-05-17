@@ -12,6 +12,7 @@ mod find_substring;
 mod finding_users_active_minutes;
 mod get_smallest_string;
 mod hardest_worker;
+mod have_conflict;
 mod is_robot_bounded;
 mod is_valid;
 mod length_of_lis;
