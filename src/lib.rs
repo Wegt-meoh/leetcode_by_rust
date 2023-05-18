@@ -1,3 +1,4 @@
+mod add_negabinary;
 mod best_team_score;
 mod btree_game_winning_move;
 mod check_x_matrix;
