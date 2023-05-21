@@ -47,6 +47,7 @@ mod single_number;
 mod smallest_repunit_div_by_k;
 mod sort_people;
 mod stl;
+mod storeWater;
 mod strong_password_checker_ii;
 mod three_sum;
 mod validate_stack_sequences;
