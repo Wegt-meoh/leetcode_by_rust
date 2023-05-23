@@ -16,6 +16,7 @@ mod hardest_worker;
 mod have_conflict;
 mod is_robot_bounded;
 mod is_valid;
+mod largest_vals_from_labels;
 mod length_of_lis;
 mod level_order;
 mod longest_prefix;
