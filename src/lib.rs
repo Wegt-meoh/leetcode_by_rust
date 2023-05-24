@@ -11,6 +11,7 @@ mod find_longest_subarray;
 mod find_max_k;
 mod find_substring;
 mod finding_users_active_minutes;
+mod frog_position;
 mod get_smallest_string;
 mod hardest_worker;
 mod have_conflict;

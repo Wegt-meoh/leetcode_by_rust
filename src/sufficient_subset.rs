@@ -1,5 +1,5 @@
 pub struct Solution {}
-// Definition for a binary tree node.
+// // Definition for a binary tree node.
 #[derive(Debug, PartialEq, Eq)]
 pub struct TreeNode {
     pub val: i32,
@@ -18,7 +18,6 @@ impl TreeNode {
     }
 }
 
-use std::borrow::BorrowMut;
 use std::cell::RefCell;
 use std::rc::Rc;
 impl Solution {
@@ -78,3 +77,41 @@ impl Solution {
 
 #[test]
 fn test() {}
+
+// pub struct Solution;
+
+// use std::rc::Rc;
+// use std::cell::RefCell;
+// impl Solution {
+//     pub fn sufficient_subset(
+//         root: Option<Rc<RefCell<TreeNode>>>,
+//         limit: i32,
+//     ) -> Option<Rc<RefCell<TreeNode>>> {
+//         fn dfs(
+//             root: Option<Rc<RefCell<TreeNode>>>,
+//             limit: i32,
+//             mut sum: i32,
+//         ) -> (Option<Rc<RefCell<TreeNode>>>, i32) {
+//             if let Some(root) = root {
+//                 let mut child_sum = root.borrow().val;
+//                 let mut left = dfs(root.borrow_mut().left.take(), limit, sum + child_sum);
+//                 let mut right = dfs(root.borrow_mut().right.take(), limit, sum + child_sum);
+//                 child_sum += if left.1 == i32::MIN && right.1 == i32::MIN {
+//                     0
+//                 } else {
+//                     left.1.max(right.1)
+//                 };
+//                 if sum + child_sum < limit {
+//                     (None, child_sum)
+//                 } else {
+//                     root.borrow_mut().left = left.0.take();
+//                     root.borrow_mut().right = right.0.take();
+//                     (Some(root), child_sum)
+//                 }
+//             } else {
+//                 (None, i32::MIN)
+//             }
+//         }
+//         dfs(root, limit, 0).0
+//     }
+// }
