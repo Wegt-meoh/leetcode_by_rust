@@ -40,6 +40,7 @@ mod num_moves_stones_ii;
 mod num_of_minutes;
 mod num_pairs_divisible_by60;
 mod num_tile_possibilities;
+mod odd_string;
 mod permute;
 mod powerful_integers;
 mod query_string;
