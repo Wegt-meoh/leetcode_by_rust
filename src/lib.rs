@@ -46,6 +46,7 @@ mod powerful_integers;
 mod query_string;
 mod rearrange_barcodes;
 mod reverse;
+mod shortest_path_binary_matrix;
 mod single_number;
 mod smallest_repunit_div_by_k;
 mod sort_people;
