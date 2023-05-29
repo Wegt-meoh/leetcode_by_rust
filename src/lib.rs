@@ -1,4 +1,5 @@
 mod add_negabinary;
+mod average_value;
 mod best_team_score;
 mod btree_game_winning_move;
 mod check_x_matrix;
@@ -17,6 +18,7 @@ mod hardest_worker;
 mod have_conflict;
 mod is_robot_bounded;
 mod is_valid;
+mod kth_smallest;
 mod largest_vals_from_labels;
 mod length_of_lis;
 mod level_order;
