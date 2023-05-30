@@ -7,6 +7,7 @@ mod combination_sum;
 mod combination_sum2;
 mod count_points;
 mod count_time;
+mod del_nodes;
 mod find_anagrams;
 mod find_longest_subarray;
 mod find_max_k;
