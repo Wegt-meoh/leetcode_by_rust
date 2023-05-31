@@ -33,6 +33,7 @@ mod max_sum_after_partitioning;
 mod max_sum_bst;
 mod max_total_fruits;
 mod max_value_after_reverse;
+mod mct_from_leaf_values;
 mod min_difficulty;
 mod min_number_of_frogs;
 mod min_push_box;
