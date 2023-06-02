@@ -63,4 +63,5 @@ mod strong_password_checker_ii;
 mod sufficient_subset;
 mod three_sum;
 mod validate_stack_sequences;
+mod vowel_strings;
 mod ways_to_make_fair;
