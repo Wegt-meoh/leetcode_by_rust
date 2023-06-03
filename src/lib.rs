@@ -30,6 +30,7 @@ mod matrix_rank_transform;
 mod max_coins;
 mod max_equal_rows_after_flips;
 mod max_happy_groups;
+mod max_rep_opt1;
 mod max_sum_after_partitioning;
 mod max_sum_bst;
 mod max_total_fruits;
