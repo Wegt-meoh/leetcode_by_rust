@@ -3,10 +3,10 @@ services:
     entrypoint:
     - sleep
     - infinity
-    image: rust-dev-env:debian
+    image: wgetmeoh/rust-lang-dev-env:debian
     init: true
     volumes:
     - type: bind
-      source: /var/run/docker.sock
-      target: /var/run/docker.sock
+      source: ./
+      target: /com.docker.devenvironments.code
 
