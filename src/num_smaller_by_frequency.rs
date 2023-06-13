@@ -1,46 +1,45 @@
 use std::collections::HashMap;
 
-pub struct Solution{}
+pub struct Solution {}
 
 impl Solution {
     pub fn num_smaller_by_frequency(queries: Vec<String>, words: Vec<String>) -> Vec<i32> {
-        let mut result=vec![0;queries.len()];
+        let mut result = vec![0; queries.len()];
 
-        let f_words={
-            let mut a=words.iter().map(|s|{Self::f(s)}).collect::<Vec<_>>();
+        let f_words = {
+            let mut a = words.iter().map(|s| Self::f(s)).collect::<Vec<_>>();
             a.sort();
             a
         };
-        let f_que=queries.iter().map(|s|{Self::f(s)}).collect::<Vec<_>>();
+        let f_que = queries.iter().map(|s| Self::f(s)).collect::<Vec<_>>();
 
-        for (index,q) in f_que.iter().enumerate(){
-            if *q<f_words[0]{
-                result[index]=f_words.len() as i32;
+        for (index, q) in f_que.iter().enumerate() {
+            if *q < f_words[0] {
+                result[index] = f_words.len() as i32;
                 continue;
             }
 
-            if q>=f_words.last().unwrap(){
-                result[index]=0;
+            if q >= f_words.last().unwrap() {
+                result[index] = 0;
                 continue;
             }
 
-            let mut left=0;
-            let mut right=f_words.len();
-            while left<right{
-                let mid=(left+right)/2;
-                if f_words[mid]>*q{
-                    right=mid;
-                }else{
-                    left=mid+1;
+            let mut left = 0;
+            let mut right = f_words.len();
+            while left < right {
+                let mid = (left + right) / 2;
+                if f_words[mid] > *q {
+                    right = mid;
+                } else {
+                    left = mid + 1;
                 }
             }
 
-            if f_words[left]>*q{
-                result[index]=(f_words.len()-left) as i32;
-            }else {
-                result[index]=(f_words.len()-left-1) as i32;
+            if f_words[left] > *q {
+                result[index] = (f_words.len() - left) as i32;
+            } else {
+                result[index] = (f_words.len() - left - 1) as i32;
             }
-
         }
 
         println!("f_que={:?}", f_que);
@@ -49,19 +48,19 @@ impl Solution {
         result
     }
 
-    fn f(s:&str)->i32{
-        let mut word_count=HashMap::new();
-        for i in s.chars(){
-            word_count.entry(i).and_modify(|x|{*x+=1}).or_insert(1);
+    fn f(s: &str) -> i32 {
+        let mut word_count = HashMap::new();
+        for i in s.chars() {
+            word_count.entry(i).and_modify(|x| *x += 1).or_insert(1);
         }
 
-        let mut min_char=None;
-        let mut min_char_count=0;
+        let mut min_char = None;
+        let mut min_char_count = 0;
 
-        for (word,count) in word_count.iter(){
-            if min_char==None||min_char.unwrap()>word{
-                min_char=Some(word);
-                min_char_count=*count;
+        for (word, count) in word_count.iter() {
+            if min_char == None || min_char.unwrap() > word {
+                min_char = Some(word);
+                min_char_count = *count;
             }
         }
 
@@ -82,6 +81,4 @@ impl Solution {
 // 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
 
 #[test]
-fn test(){
-
-}
+fn test() {}
