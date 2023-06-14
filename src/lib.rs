@@ -65,6 +65,7 @@ mod store_water;
 mod strong_password_checker_ii;
 mod sufficient_subset;
 mod three_sum;
+mod three_sum_closest;
 mod tree_ancestor;
 mod unequal_triplets;
 mod validate_stack_sequences;

@@ -29,11 +29,11 @@ impl Solution {
             } else {
                 count_vec.push(temp_count);
                 prev_num = Some(*i);
-                temp_count=1;
+                temp_count = 1;
             }
         }
 
-        if prev_num!=None{
+        if prev_num != None {
             count_vec.push(temp_count);
         }
 
