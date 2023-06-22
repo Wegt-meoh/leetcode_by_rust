@@ -23,11 +23,11 @@ impl Solution {
 
             while left < right {
                 let sum = temp_nums[right] + temp_nums[left] + temp_nums[i];
-                    if result == None {
-                        result = Some(sum);
-                    } else if i32::abs(target - result.unwrap()) > i32::abs(target - sum) {
-                        result = Some(sum);
-                    }
+                if result == None {
+                    result = Some(sum);
+                } else if i32::abs(target - result.unwrap()) > i32::abs(target - sum) {
+                    result = Some(sum);
+                }
                 if sum < target {
                     left += 1;
                 } else if sum > target {

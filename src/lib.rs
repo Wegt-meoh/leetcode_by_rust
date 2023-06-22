@@ -34,6 +34,7 @@ mod max_happy_groups;
 mod max_rep_opt1;
 mod max_sum_after_partitioning;
 mod max_sum_bst;
+mod max_sum_div_three;
 mod max_total_fruits;
 mod max_value_after_reverse;
 mod maximum_tastiness;
