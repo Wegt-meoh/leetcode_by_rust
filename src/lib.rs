@@ -55,7 +55,6 @@ mod num_of_minutes;
 mod num_pairs_divisible_by60;
 mod num_smaller_by_frequency;
 mod num_tile_possibilities;
-mod number_of_alternating_groups;
 mod odd_string;
 mod permute;
 mod powerful_integers;
