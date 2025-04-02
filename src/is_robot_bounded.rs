@@ -2,8 +2,7 @@ pub struct Solution {}
 
 impl Solution {
     pub fn is_robot_bounded(instructions: String) -> bool {
-        let mut step = 0;
-        let direction = vec![(0, 1), (-1, 0), (0, -1), (1, 0)];
+        let direction = [(0, 1), (-1, 0), (0, -1), (1, 0)];
         let mut current_direction = 0;
         let mut current_position = (0, 0);
         for i in 0..instructions.len() {
@@ -13,25 +12,17 @@ impl Solution {
                 current_position.1 += direction[current_direction].1;
             } else if c == "L" {
                 current_direction = (current_direction + 1) % direction.len();
+            } else if current_direction == 0 {
+                current_direction = 3;
             } else {
-                if current_direction == 0 {
-                    current_direction = 3;
-                } else {
-                    current_direction -= 1;
-                }
+                current_direction -= 1;
             }
         }
 
         if current_position == (0, 0) {
-            return true;
+            true
         } else {
-            if current_direction == 0 {
-                return false;
-            } else if current_direction == 2 {
-                return true;
-            } else {
-                return true;
-            }
+            current_direction != 0
         }
     }
 }

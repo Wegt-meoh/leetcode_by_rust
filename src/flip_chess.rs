@@ -18,7 +18,7 @@ impl Solution {
         let m = chess_map[0].len();
 
         for (i, string) in chessboard.iter().enumerate() {
-            for (j, c) in string.chars().into_iter().enumerate() {
+            for (j, c) in string.chars().enumerate() {
                 if c == '.' {
                     chess_map[i][j] = Chess::nothing;
                 } else if c == 'X' {

@@ -1,4 +1,4 @@
-use std::collections::{BinaryHeap, HashMap, HashSet};
+use std::collections::{BinaryHeap, HashSet};
 
 pub struct Solution {}
 
@@ -19,17 +19,7 @@ impl Group {
 
 impl PartialOrd for Group {
     fn partial_cmp(&self, other: &Self) -> Option<std::cmp::Ordering> {
-        let mut other_sum = 0;
-        for i in other.value_vec.iter() {
-            other_sum += i;
-        }
-
-        let mut self_sum = 0;
-        for i in self.value_vec.iter() {
-            self_sum += i;
-        }
-
-        return Some(other_sum.cmp(&self_sum));
+        Some(Self::cmp(self, other))
     }
 }
 
@@ -45,7 +35,7 @@ impl Ord for Group {
             self_sum += i;
         }
 
-        return other_sum.cmp(&self_sum);
+        other_sum.cmp(&self_sum)
     }
 }
 
@@ -56,10 +46,10 @@ impl Solution {
         let first = {
             let mut index_vec = vec![];
             let mut value_vec = vec![];
-            for i in 0..mat.len() {
+            (0..mat.len()).for_each(|i| {
                 index_vec.push(0);
                 value_vec.push(mat[i][0]);
-            }
+            });
 
             Group::new(index_vec, value_vec)
         };

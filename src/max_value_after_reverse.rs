@@ -42,9 +42,9 @@ impl Solution {
 
     fn abs(a: i32, b: i32) -> i32 {
         if a >= b {
-            return a - b;
+            a - b
         } else {
-            return b - a;
+            b - a
         }
     }
 }

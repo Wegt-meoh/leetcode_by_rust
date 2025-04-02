@@ -59,7 +59,7 @@ impl Solution {
                 result.push(temp & 1);
             } else {
                 result.push(temp & 1);
-                temp = temp / 2;
+                temp /= 2;
             }
             flag = -flag;
         }

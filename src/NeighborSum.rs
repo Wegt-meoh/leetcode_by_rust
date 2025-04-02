@@ -1,5 +1,3 @@
-use std::ops::{Add, Div};
-
 struct NeighborSum {
     grid: Vec<Vec<i32>>,
     n: usize,
@@ -13,10 +11,10 @@ static DIAGONAL_DIR: [(i32, i32); 4] = [(1, 1), (1, -1), (-1, 1), (-1, -1)];
  */
 impl NeighborSum {
     fn new(grid: Vec<Vec<i32>>) -> Self {
-        return Self {
+        Self {
             n: grid.len(),
             grid,
-        };
+        }
     }
 
     fn get_pos(&self, value: i32) -> (usize, usize) {
@@ -28,7 +26,7 @@ impl NeighborSum {
             }
         }
 
-        return (0, 0);
+        (0, 0)
     }
 
     fn adjacent_sum(&self, value: i32) -> i32 {
@@ -45,7 +43,7 @@ impl NeighborSum {
             }
         });
 
-        return sum;
+        sum
     }
 
     fn diagonal_sum(&self, value: i32) -> i32 {
@@ -62,6 +60,6 @@ impl NeighborSum {
             }
         });
 
-        return sum;
+        sum
     }
 }

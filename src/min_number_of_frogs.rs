@@ -40,8 +40,8 @@ impl Solution {
 
     fn get_index(c: &char) -> usize {
         const CHECK: [char; 5] = ['c', 'r', 'o', 'a', 'k'];
-        for i in 0..CHECK.len() {
-            if c == &CHECK[i] {
+        for (i, item) in CHECK.iter().enumerate() {
+            if c == item {
                 return i;
             }
         }
