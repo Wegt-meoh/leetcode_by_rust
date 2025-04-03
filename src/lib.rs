@@ -1,4 +1,3 @@
-mod NeighborSum;
 mod add_negabinary;
 mod average_value;
 mod beautiful_subarrays;
@@ -52,6 +51,7 @@ mod min_number_of_frogs;
 mod min_push_box;
 mod min_side_jumps;
 mod moves_to_make_zigzag;
+mod neighbor_sum;
 mod next_larger_nodes;
 mod num_moves_stones_ii;
 mod num_of_minutes;
