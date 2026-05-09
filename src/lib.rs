@@ -47,6 +47,7 @@ mod maximum_beauty_query;
 mod maximum_tastiness;
 mod mct_from_leaf_values;
 mod min_difficulty;
+mod min_jumps_3629;
 mod min_number_of_frogs;
 mod min_push_box;
 mod min_side_jumps;
