@@ -65,6 +65,7 @@ mod powerful_integers;
 mod query_string;
 mod rearrange_barcodes;
 mod reverse;
+mod rotate_grid_1914;
 mod sample_stats;
 mod shortest_distance_after_queries;
 mod shortest_path_binary_matrix;
