@@ -76,6 +76,7 @@ mod stl;
 mod store_water;
 mod strong_password_checker_ii;
 mod sufficient_subset;
+mod test;
 mod three_sum;
 mod three_sum_closest;
 mod tree_ancestor;
