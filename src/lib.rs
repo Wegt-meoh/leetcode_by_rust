@@ -70,6 +70,7 @@ mod sample_stats;
 mod shortest_distance_after_queries;
 mod shortest_path_binary_matrix;
 mod single_number;
+mod slice_to_vec;
 mod smallest_repunit_div_by_k;
 mod sort_people;
 mod stl;
