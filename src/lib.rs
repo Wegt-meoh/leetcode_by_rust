@@ -9,6 +9,7 @@ mod check_partitioning;
 mod check_x_matrix;
 mod combination_sum;
 mod combination_sum2;
+mod count_different_subsequence_gc_ds;
 mod count_points;
 mod count_time;
 mod del_nodes;
