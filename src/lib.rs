@@ -44,6 +44,7 @@ mod max_total_fruits;
 mod max_value_after_reverse;
 mod maximum_beauty;
 mod maximum_beauty_query;
+mod maximum_jumps_2770;
 mod maximum_score_3225;
 mod maximum_tastiness;
 mod mct_from_leaf_values;
