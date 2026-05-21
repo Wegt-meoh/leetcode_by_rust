@@ -31,6 +31,7 @@ mod kth_smallest;
 mod largest_vals_from_labels;
 mod length_of_lis;
 mod level_order;
+mod longest_common_prefix_3043;
 mod longest_prefix;
 mod make_array_increasing;
 mod matrix_rank_transform;
