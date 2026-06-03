@@ -14,6 +14,7 @@ mod count_points;
 mod count_time;
 mod del_nodes;
 mod distinct_averages;
+mod earliest_finish_time_3635;
 mod find_anagrams;
 mod find_longest_subarray;
 mod find_max_k;
