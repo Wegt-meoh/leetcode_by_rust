@@ -12,6 +12,7 @@ mod combination_sum2;
 mod count_different_subsequence_gc_ds;
 mod count_points;
 mod count_time;
+mod create_binary_tree_2196;
 mod del_nodes;
 mod distinct_averages;
 mod earliest_finish_time_3635;
