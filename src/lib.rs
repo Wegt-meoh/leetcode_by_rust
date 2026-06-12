@@ -1,4 +1,5 @@
 mod add_negabinary;
+mod assign_edge_weights_3558;
 mod average_value;
 mod beautiful_subarrays;
 mod beautiful_subsets;
